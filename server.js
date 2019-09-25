@@ -10,17 +10,8 @@ mongoose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser: true, us
 
 requireDir('./src/models/');
 
-const Product = mongoose.model('Product');
-
-// Rota raiz
-app.get('/', (request, response) => {
-    Product.create({
-        title: 'React Native',
-        description: 'Build native apps with react-native',
-        url: 'http://reactnative.com'
-    });
-
-    return response.send('Hello!');
-});
+// const Product = mongoose.model('Product');
+// Rotas
+app.use('/api', require('./src/routes/ProductRoute'));
 
 app.listen(3001);
