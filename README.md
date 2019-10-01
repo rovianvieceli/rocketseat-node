@@ -26,5 +26,9 @@ CONTAINER ID    IMAGE   COMMAND                  CREATED              STATUS    
 a9f87b5ca6c4    mongo   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27017->27017/tcp  mongodb
 ```
 
-### Robo 3T - acessar mongo via app
-http://robomongo.org
+
+### Robo 3T - acessar mongodb via app
+https://robomongo.org/
+
+### Insomnia - Rest Client
+https://insomnia.rest/

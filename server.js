@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
@@ -8,13 +9,15 @@ const app = express();
 // Permitir envio em Json na Request
 app.use(express.json());
 
+// Permitindo o uso por outros dominios
+app.use(cors());
+
 // Iniciando o DB sem user e pass
-mongoose.connect(
-    'mongodb://localhost:27017/nodeapi', {
-        'useNewUrlParser': true,
-        'useUnifiedTopology': true,
-        'useFindAndModify': false
-    });
+mongoose.connect('mongodb://localhost:27017/nodeapi', {
+    'useNewUrlParser': true,
+    'useUnifiedTopology': true,
+    'useFindAndModify': false
+});
 
 // habilitando as models
 requireDir('./src/models/');
