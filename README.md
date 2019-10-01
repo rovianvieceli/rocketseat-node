@@ -7,7 +7,7 @@ $ docker pull mongo
 
 ### Rodando Imagem
 ```
-$ docker run --name mongodb -p 27017:27017
+$ docker run --name mongodb -p 27017:27017 -d mongo
 ```
 * --name = nome do container
 * -p 27017:27017 = redirecionar porta "local":"container"

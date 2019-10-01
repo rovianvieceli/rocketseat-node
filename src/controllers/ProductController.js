@@ -1,5 +1,9 @@
-// Product.create({
-//     title: 'React Native',
-//     description: 'Build native apps with react-native',
-//     url: 'http://reactnative.com'
-// });
+const mongoose = require('mongoose');
+const Product = mongoose.model('Product');
+
+module.exports = {
+    async index(request, result) {
+        const product = await Product.find();
+        return result.json(product);
+    }
+};
