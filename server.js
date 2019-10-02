@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const port = 3001;
 
 // Iniciando app
 const app = express();
@@ -26,4 +27,6 @@ requireDir('./src/models/');
 app.use('/api', require('./src/route.js'));
 
 // start do servidor
-app.listen(3001);
+app.listen(port, () => {
+    console.info(`Listing on http://localhost:${port}`)
+});
