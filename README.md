@@ -15,7 +15,7 @@ $ docker run --name mongodb -p 27017:27017 -d mongo
 
 ### Rodando Imagens pausadas (exited)
 ```
-$ docker start mongo
+$ docker start mongodb
 ```
 
 ### Verificando imagem se está rodando
